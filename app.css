@@ -1,5 +1,5 @@
 .title-name {
-    background: linear-gradient(-45deg, #ffddf4, #fba0e3, #ffc0cb, #ffe4e1);
+    background: linear-gradient(-45deg, #ffddf4, #fba0e3, #f8f4bb, #ffe4e1, orange);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
     text-align: center;
@@ -7,8 +7,8 @@
     color: whitesmoke;
 }
 
-.title-name:hover {
-    background-color: white;
+body, head {
+    background-color:#fcf8f4;
 }
 
 .linkedin-section {
@@ -21,20 +21,14 @@
     height: 60px;
 }
 
-.title-name:hover, .linkedin-section:hover {
-    background-color: white;
-    border-radius: 8px;
-}
-
 /* flip card styling */
 .flip-card {
   background-color: transparent;
   width: 400px;
   height: 400px;
-  border: 1px solid #f1f1f1;
+  border: 1px solid rgb(240, 209, 231);
   border-radius: 8px;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
-  border: 3px linear-gradient(-45deg, #ffddf4, #fba0e3, #ffc0cb, #ffe4e1);
 }
 
 .flip-card-inner {
@@ -62,13 +56,13 @@
 }
 
 .flip-card-front {
-  background-color: whitesmoke;
+  background-color: #FBFBF9;
   color: grey;
   border-radius: 8px;
 }
 
 .flip-card-back {
-  background-color: snow;
+  background-color: #FBFBF9;
   color: black;
   transform: rotateY(180deg);
   border: 3px;
@@ -77,10 +71,6 @@
 .contact-styles {
 text-align: center;
 font-size: 24px;
-}
-
-.flip-cards{
-    padding-left: 100px;
 }
 
 .section-flip {
@@ -107,8 +97,7 @@ font-size: 24px;
 }
 
 .resume-container {
-
-    border-radius: 8px;
+   width: 200px;
     height: 200px;
     display: flex;
     justify-content: center;
@@ -116,10 +105,28 @@ font-size: 24px;
 
 .resume-styles {
     text-decoration: none;
-    font-size: 32px;
+    font-size: 24px;
     background-color: #ffddf4;
-    border-radius: 8px;
+    border-radius: 50%;
     border:solid;
     border-color: #fba0e3;
     text-align: center;
+    color: white;
+}
+
+.github-circle {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    background-color: #ffd394;
+    display: block;
+    position: center;
+}
+
+.github-circle-text {
+    text-align: center;
+    position: center;
+    display: flex;
+    position: center;
+    color: white;
 }
