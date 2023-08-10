@@ -2,10 +2,11 @@
 <html>
     <head>
         <link rel="stylesheet" href="app.css"/>
-        <h1 class="title-name">Carlyn  O'Leary</h1>
+          <h1 class="title-name">Carlyn  O'Leary</h1>
     </head>
     <body>
-        <table class="flip-cards">
+      <div class="flip-container">
+        <table class="flip-cards-table">
             <tr>
                 <td class="section-flip">
                     <div class="flip-card">
@@ -14,11 +15,13 @@
                             <h1>About Me</h1>
                             <img src="images/professionalpic.jpeg" style="width:200px;height:200px; border-radius: 8px;">
                           </div>
-                          <div class="flip-card-back">
-                            <p>Hey there, I'm a full stack Software Engineer passionate about building technology that impacts others in a positive way.</p> 
-                            <p>I found my calling with software over five years ago when I took my first computer science course in high school.</p>
-                            <p>Since then I've worked at several companies, gaining experience and furthering my interest in solving complex problems and 
-                              creating quality code. 
+                          <div class="flip-card-back description-section">
+                            <div class="about-me">
+                              <p class="about-me-text">Hey there! I'm a full stack Software Engineer passionate about building technology that impacts others in a positive way.
+                              I found my calling with software over five years ago when I took my first computer science course in high school.
+                              Since then I've worked at several companies, gaining experience and furthering my interest in solving complex problems and 
+                                creating quality code. </p>
+                            </div>
                             </p>
                           </div>
                         </div>
@@ -29,14 +32,13 @@
                         <div class="flip-card-inner">
                           <div class="flip-card-front">
                             <h1 class="contact-styles">Contact Me</h1>
-                            <img src="images/contact-mail.png" style="width:70px;height:70px;">
+                            <img src="images/email-2.png" style="width:70px;height:70px;">
                           </div>
                           <div class="flip-card-back contact-back">
-                            <img src="images/mail.png" style="width:70px;height:70px;">
-                            <h3>Email: mcleanc.oleary@gmail.com</h3> 
-                            <img src="images/phone-call.png" style="width:70px;height:70px;">
-                            <h3>Phone: 413-230-0589</h3> 
-                            <p></p>
+                            <div class="contact-container">
+                              <img src="images/message.png" style="width:70px;height:70px;">
+                              <h3>Email: mcleanc.oleary@gmail.com</h3> 
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -50,8 +52,27 @@
                             <img src="images/linkedin.png" style="width:70px;height:70px;">
                           </div>
                           <div class="flip-card-back linkedin-section">
-                            <a href="https://www.linkedin.com/in/carlyn-o-62098a125/">LinkedIn</a>
-                          </div>
+                            <div class='cristalBall'>
+                              <div class='cristal'>
+                                <div class='ball'>
+                                  <a class="linkedin-text" href="https://www.linkedin.com/in/carlyn-o-62098a125/"><h1>LinkedIn</h1></a>
+                                </div>
+                              </div>
+                            </div>
+                            <div class='background'>
+                              <div class='circle'>
+                              <div class='circle1'>
+                                <div class='circle2'>
+                                  
+                                  <div class='circle3'>
+                            <!--         <div class='star'>Hire</div> -->
+                                  </div>
+                                </div>
+                              </div>
+                              </div>
+                            <div>
+                            </div>
+                           </div>
                         </div>
                       </div>
                 </td>
@@ -61,10 +82,15 @@
                 <div class="flip-card">
                   <div class="flip-card-inner">
                     <div class="flip-card-front">
-                      <h1 class="linkedin-styles">Resume</h1>
+                      <div class="resume-front">
+                        <h1 class="linkedin-styles">Resume</h1>
+                        <img src="images/google-docs.png" style="width:70px;height:70px; align-items: center;">
+                      </div>
                     </div>
-                    <div class="flip-card-back linkedin-section">
-                      <a class="resume-styles" href="https://www.canva.com/design/DAFqyxxNzzo/GJZvnYolaZAsRniTpoeGIw/edit?utm_content=DAFqyxxNzzo&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"><img src="images/google-docs.png" style="width:50px;height:50px; align-items: center;">Click to go to Resume</a>
+                    <div class="flip-card-back resume-section">
+                      <div class="resume-container">
+                        <a class="resume-styles" href="https://www.canva.com/design/DAFqyxxNzzo/GJZvnYolaZAsRniTpoeGIw/edit?utm_content=DAFqyxxNzzo&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"><p>Click to go to resume</p></a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -73,10 +99,15 @@
                 <div class="flip-card">
                   <div class="flip-card-inner">
                     <div class="flip-card-front">
-                      <h4 class="github-circle-text">Click to View Github</h4>
-                      <img src="images/github-2.png" style="width:60px;height:60px;">
+                      <div class="github-front">
+                        <h1 class="github-front-text">Github</h1>
+                        <img src="images/github-4.png" style="width:90px;height:90px;">
+                      </div>
                     </div>
-                    <div class="flip-card-back linkedin-section">
+                    <div class="flip-card-back">
+                      <div class="github-section">
+                        <a class="github-section-text" href="https://github.com/carlynoleary">Link to Github</a>
+                      </div>                      
                     </div>
                   </div>
                 </div>               
@@ -85,15 +116,19 @@
                 <div class="flip-card">
                   <div class="flip-card-inner">
                     <div class="flip-card-front">
-                      <h4>Other Projects and Notable Achievements</h4>
+                      <div class="other-section-front">
+                        <h1>Other Projects</h1>
+                        <img src="images/folder.png" style="width:70px;height:70px;">
+                      </div>
                     </div>
-                    <div class="flip-card-back linkedin-section">
+                    <div class="flip-card-back other-section">
                     </div>
                   </div>
                 </div>           
               </td>
             </tr>
         </table> 
+      </div>
     </body>
     <script src="app.js"></script>
 </html>
