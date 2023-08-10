@@ -109,16 +109,14 @@ font-size: 24px;
    color: lightblue;
 }
 
-.github-circle-text {
-    text-align: center;
-    position: center;
-    display: flex;
-    position: center;
-    color: white;
-}
-
 .about-me {
     padding: 80px 20px 0px 20px;
+}
+
+.email-me-link {
+text-decoration: none;
+font-size: 18px;
+color: rgb(150, 38, 198);
 }
 
 .about-me-text {
@@ -215,7 +213,9 @@ font-size: 24px;
     100%{width:100px;height:100px;}
   }
   
-  
+  .about-me-front {
+    padding-top: 40px;
+  }
   
  
 
