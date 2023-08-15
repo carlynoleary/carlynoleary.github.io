@@ -127,6 +127,7 @@ color: rgb(150, 38, 198);
     border-color: rgb(242, 233, 234);
     background-color: rgb(236, 246, 249);
     border-radius: 8px;
+    padding: 10px;
 }
 
 .contact-container, .github-front {
@@ -236,7 +237,7 @@ color: rgb(150, 38, 198);
   }
 
   .other-proj-back {
-    padding: 100px 20px 0px 20px;
+    padding: 80px 20px 0px 20px;
       color: slategray;
   }
 
