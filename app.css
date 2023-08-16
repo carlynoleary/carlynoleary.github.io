@@ -6,6 +6,7 @@
     border-radius: 8px;
     color: rgb(101, 96, 96);
     padding-top: 10px;
+    width: 100%;
 }
 
 body, head {
@@ -13,9 +14,17 @@ body, head {
 }
 
 .flip-container {
-    padding-right: 50px;
-    padding-left: 50px;
-    margin-bottom: 30px;
+    display: grid;
+    grid-template-columns: minmax(min-content, 300px) minmax(200px, 1fr) 150px;
+    grid-gap: 5px;
+    box-sizing: border-box;
+    width: 100%;
+    text-align: center;
+    padding-left: 30px;
+}
+
+.flip-cards-table {
+    table-layout: fixed;
 }
 
 .title-name {
@@ -108,6 +117,7 @@ font-size: 24px;
    text-decoration: none;
    padding: 10px;
    color: lightblue;
+   background-color: rgb(126, 122, 122);
 }
 
 .about-me {
@@ -220,6 +230,10 @@ color: rgb(150, 38, 198);
     padding-top: 40px;
   }
 
+  .resume-div {
+    padding-left: 30px;
+  }
+
   .resume-pdf {
     width: 1225px; 
     height: 300px; 
@@ -228,12 +242,6 @@ color: rgb(150, 38, 198);
     margin: 0; 
     overflow: none;
     border: none;
-  }
-
-  .resume-div {
-    padding-right: 70px;
-    padding-left: 50px;
-    margin-bottom: 30px;
   }
 
   .other-proj-back {
