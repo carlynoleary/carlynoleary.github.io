@@ -1,254 +1,180 @@
-.title-name {
-    background: linear-gradient(-45deg, #ffddf4, #fba0e3, #f8f4bb, #ffe4e1, orange);
-    background-size: 400% 400%;
-    animation: gradient 15s ease infinite;
-    text-align: center;
-    border-radius: 8px;
-    color: rgb(101, 96, 96);
-    padding-top: 10px;
-    width: 100%;
+.flex-container {
+  display: flex;
+  flex-wrap: nowrap;
+  border-bottom: #949494;
+  box-shadow:inset;
+  -webkit-box-shadow: 0 4px 6px -6px #222;
 }
 
-body, head {
-    background-color:#fcf8f4;
-}
-
-.flip-container {
-    display: grid;
-    grid-template-columns: minmax(min-content, 300px) minmax(200px, 1fr) 150px;
-    grid-gap: 5px;
-    box-sizing: border-box;
-    width: 100%;
-    text-align: center;
-    padding-left: 30px;
-}
-
-.flip-cards-table {
-    table-layout: fixed;
-}
-
-.title-name {
-    height: 60px;
-}
-
-/* flip card styling */
-.flip-card {
-  background-color: transparent;
-  width: 400px;
-  height: 400px;
-  border: 1px solid rgb(240, 209, 231);
-  border-radius: 8px;
-  perspective: 1000px; /* Remove this if you don't want the 3D effect */
-}
-
-.flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
+.title-link {
+  width: max-content;
+  margin: 10px;
   text-align: center;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
+  line-height: 75px;
+  font-size: 30px;
+  flex: 2 1;
 }
 
-/* Do an horizontal flip when you move the mouse over the flip box container */
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
+.flex-container > div > a {
+  color: #949494;
+  border-bottom: hidden;
+  border: hidden;
+  outline: none;
+  text-decoration: none;
+  font-family: Montserrat, sans-serif;
 }
 
-/* Position the front and back side */
-.flip-card-front, .flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden; 
-  backface-visibility: hidden;
-  border-radius: 8px;
+.flex-container > div > a:hover {
+  color: lightpink;
+  font-size: 33px;
+  border-bottom: solid, #222;
+  font-family: Montserrat, sans-serif;
 }
 
-.flip-card-front {
-  background-color: #FBFBF9;
-  color: grey;
-  border-radius: 8px;
+.title-name {
+  color: #949494;
+  border-bottom: hidden;
+  border: hidden;
+  outline: none;
+  text-decoration: none;
 }
 
-.flip-card-back {
-  background-color: #FBFBF9;
-  color: black;
-  transform: rotateY(180deg);
-  border: 3px;
+#body
+.flex-container-home {
+  display: flex;
+  flex-wrap: nowrap;
+  border-bottom: #949494;
+  box-shadow:inset;
+  -webkit-box-shadow: 0 4px 6px -6px #222;
+}
+.flex-container-home > div {
+  width: max-content;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
 }
 
-.contact-styles {
-text-align: center;
-font-size: 24px;
+.item {
+  box-shadow:inset;
+  -webkit-box-shadow: 0 4px 6px -6px #222;
+  padding: 1em;
+  max-width: 75%;
+  background-color: #f1f3f2;
+  text-align: center;
+  width: 600px;
+  height: 400px;
 }
 
-.section-flip {
-    padding-left: 5px;
-    padding-right: 5px;
-    padding-bottom: 30px;
+.exp-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-@keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
+.box {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px 10em;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5%;
 }
 
-.linkedin-styles, .contact-styles {
-    font-size: 34px;
-    padding-top: 80px;
+.box :first-child {
+  align-self: center;
 }
 
-.github-section {
-    padding-top: 200px;
+.exp-title {
+  text-decoration: none;
+  color: gray;
+  font-size: 40px;
+  font-family: Quicksand, Arial, sans-serif;
+  font-weight: 500;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.exp-title-nextShift {
+  text-decoration: none;
+  color: gray;
+  font-size: 36px;
+  font-family: Quicksand, Arial, sans-serif;
+  font-weight: 500;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
-.github-section-text {
-   border: solid;
-   border-color: pink;
-   font-size: 24px;
-   text-decoration: none;
-   padding: 10px;
-   color: lightblue;
-   background-color: rgb(126, 122, 122);
+.exp-desc {
+  font-family: Quicksand, Arial, sans-serif;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
-.about-me {
-    padding: 80px 20px 0px 20px;
+.exp-img {
+  width: 6rem;
+  border: 1px solid #d9e6ff;
+}
+.exp-img-veo {
+  width: 10rem;
+  border: 1px solid #d9e6ff;
 }
 
-.email-me-link {
-text-decoration: none;
-font-size: 18px;
-color: rgb(150, 38, 198);
+.exp-link {
+  text-decoration: none;
+  font-weight: 500;
+  color: lightpink;
+  font-size: 25px;
 }
 
-.about-me-text {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 18px;
-    border: solid;
-    border-color: rgb(242, 233, 234);
-    background-color: rgb(236, 246, 249);
-    border-radius: 8px;
-    padding: 10px;
+.contact-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-y:scroll;
 }
 
-.contact-container, .github-front {
-    padding: 100px 20px 0px 20px;
+.contact-inner-div {
+  display:grid;
+  gap: 10px 10em;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5%;
+  grid-template-columns: 3fr;
 }
 
-.linkedin-container {
-    border: solid;
+.linkedin, .email-me-link, .github{
+  font-size: 24px;
+  color: lightpink;
+  text-decoration: none;
 }
 
-.other-section-front {
-    padding: 100px 20px 0px 20px;
+.contact-box {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0px 4em;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5%;
 }
 
-.resume-front {
-    padding: 20px 20px 0px 20px;
+.icon-contact {
+  font-size: 4em;
 }
 
-.linkedin-text {
-    text-decoration: none;
-    color: pink;
+.contact-link {
+  padding: 30px;
 }
 
-.resume-section {
-    background-color: #ffddf4;
- }
- 
- .resume-container {
-    padding-top: 120px;
- }
- .resume-styles {
-     text-decoration: none;
-     font-size: 24px;
-     text-align: center;
-     color: slategray;
- }
- 
- .name{
-    text-align:center;
-  /*   margin-top:140px; */
-    font-size:37px;
-    position:relative;
-    font-family: 'Exo', sans-serif;
-    color:#fff;
-  }
-  
-  .cristalBall{
-    width: 100%;
-    margin: auto;
-    position: absolute;
-    top: 50%; left: 50%;
-    transform: translate(-50%,-50%);
-    z-index:99999;
-  }
-  
-  .background{
-    background-color:white;
-    width:100%;
-    height:100%;
-    position:absolute;
-    top:0;
-    left:0;
-  }
-  
-  .circle3{
-    background-color:#ee88fd;
-    height:25px;
-    border-radius:50%;
-    width: 25px;
-    margin: auto;
-    position: absolute;
-    top: 50%; left: 50%;
-    transform: translate(-50%,-50%);
-    font-size:50px;
-    animation: pulse2 3s linear infinite;
-  }
-  
-  .star{
-    transform: translate(150px,25px);
-    opacity:.6;
-  }
-  
-  @keyframes pulse2{
-    0%{width:100px;height:100px;}
-    50%{width:150px;height:150px;}
-    100%{width:100px;height:100px;}
-  }
-  
-  .about-me-front {
-    padding-top: 40px;
-  }
-
-  .resume-div {
-    padding-left: 30px;
-  }
-
-  .resume-pdf {
-    width: 1225px; 
-    height: 300px; 
-    max-height: 80vh; 
-    padding: 10px; 
-    margin: 0; 
-    overflow: none;
-    border: none;
-  }
-
-  .other-proj-back {
-    padding: 80px 20px 0px 20px;
-      color: slategray;
-  }
-
-  
- 
-
+.title-name {
+  text-align: center;
+  line-height: 75px;
+  color: lightpink;
+  margin-right: 16rem;
+  font-weight: lighter;
+  font-size: 2.5rem;
+  font-family: Montserrat, sans-serif;
+  font-size: 40px;
+  margin-left: 1rem;
+}
