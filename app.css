@@ -124,8 +124,12 @@
 .exp-link {
   text-decoration: none;
   font-weight: 500;
-  color: lightpink;
+  color: orange;
   font-size: 25px;
+}
+
+.job-title {
+  font-weight: bold;
 }
 
 .contact-inner {
@@ -177,4 +181,57 @@
   font-family: Montserrat, sans-serif;
   font-size: 40px;
   margin-left: 1rem;
+}
+
+.syr-img, .elon-img {
+  width: 9rem;
+}
+
+.background-title {
+  margin: 0px;
+  color: gray;
+  font-size: 36px;
+  font-family: Quicksand, Arial, sans-serif;
+  font-weight: 500;
+}
+
+.campus-involv-title {
+  color: gray;
+}
+
+.syr-h, .vol-h, .vol-p, .elon-h, .proj-desc {
+  margin: 0px;
+}
+
+.vol-h, .media-serv-h3 {
+  color: orange;
+}
+
+.syr-campus-inv {
+  text-align: left;
+  margin: 0px;
+}
+
+.syr-list > li > p {
+  font-size: 16px;
+}
+
+.syr-list > li > h4 {
+ color: orange;
+}
+
+.back-item {
+  overflow-y: scroll;
+}
+
+.volunteering-title {
+  margin-bottom: 5px;
+}
+
+.vol-desc {
+  margin-bottom: 15px;
+}
+
+.proj-title {
+  color: orange
 }
