@@ -1,77 +1,122 @@
 <!DOCTYPE html>
 <html>
-    <head class="header">
-      <meta name=viewport content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../app.css"/>
-        <div class="header"> 
-          <div class="flex-container">
-            <div class="title-name">Carlyn O'Leary</div>
-            <div><a class="title-link" href="./experience.html">Experience</a></div>
-            <div><a class="title-link" href="./background.html">Background</a></div>
-            <div><a class="title-link" href="./projects.html">Projects</a></div>  
-            <div><a class="title-link" href="./contact.html">Contact Me</a></div>
-        </div>
-    </head>
-    <body>
-    <div class="exp-container">
-     <div class="box">
-      <div class="item">
-        <div class="exp-container">
-            <div class="box">
-                <p class="exp-title">Paylocity</p>
-                <h4 class="exp-desc job-title">Software Engineer</h4>
-                <h4 class="exp-desc">Full Time July 2022 - Present</h4>
-                <h4 class="exp-desc">Software Engineering Intern June 2021 - Aug 2021</h4>
-                <div><img class="exp-img" src="../images/paylocity-logo.png"/></div>
-                <h4 class="exp-desc">Full stack engineering for an HCM.</h4>
-                <h4 class="exp-desc">Currently develop features from start to finish including query contruction, API implementation, and UI elements.</h4>
-                <h4 class="exp-desc">Tech stack included primarily React, .Net, JS, C#, and SQL</h4>
-                <a class="exp-desc exp-link" href="https://www.paylocity.com/lp/software/scalable-tailored-hr/?utm_source=google&utm_medium=paid&utm_campaign=us-b_search-brand_core-conv&utm_content=PAY-TM-BrandCore-Paylocity&utm_term=paylocity&gad_source=1&gclid=CjwKCAjwgpCzBhBhEiwAOSQWQUQhVIPeiJMAa6XswqNJ_YxySb9pn_sJoU-FdJj6YlI3cLlGVy9eFBoCWCYQAvD_BwE">- Paylocity Website - </a>
-            </div>
-        </div>
-      </div>
-      <div class="item">
-        <div class="exp-container">
-            <div class="box">
-                <p class="exp-title">Veo Robotics</p> 
-                <h4 class="exp-desc job-title">Software Engineering Intern</h4>
-                <h4 class="exp-desc">May 2019 - Aug 2020 and May 2020 - Aug 2021</h4>           
-                <div><img class="exp-img-veo" src="../images/veo-robotics.png"></img></div>
-                <h4 class="exp-desc">
-                    Internship 1: DevOps engineering included work on helping to improve the internal process of development through visuals.
-                </h4>
-                <h4 class="exp-desc">Developed mainly in Python and Java</h4>
-                <h4 class="exp-desc">
-                    Internship 2: Helped to create graphics tracking engines robots 
-                    ran on.
-                </h4>
-                <h4 class="exp-desc">Developed mainly in pandas via python</h4>
-                <a class="exp-desc exp-link" href="https://www.veobot.com/">- Veo Robotics Website -</a>
-            </div>
-        </div>
-      </div>
-      <div class="item">
-        <div class="exp-container">
-            <div class="box">
-                <p class="exp-title-nextShift">Next Shift Robotics to JASCI</p> 
-                <h4 class="exp-desc job-title">Software Engineering Intern</h4>
-                <h4 class="exp-desc">July 2017</h4>           
-                <div><img class="exp-img-veo" src="../images/jasci.png"></img></div>
-                <h4 class="exp-desc">Spent time demoing robots and learning startup development processes</h4>
-                <a class="exp-desc exp-link" href="https://www.jascicloud.com/robotics-hub">- JASCI Website -</a>
-            </div>
-        </div>
-      </div>
-      <div class="item">
-        <p class="exp-title">Full Resume</p> 
-        <p>- Click to Expand -</p>
-        <iframe loading="lazy" class="resume-pdf" 
-        src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAFqyxxNzzo&#x2F;view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
-      </iframe>
-      <a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAFqyxxNzzo&#x2F;view?utm_content=DAFqyxxNzzo&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener"></a>
-      </div>
+
+<head>
+  <meta name=viewport content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../app.css" />
+</head>
+
+<body>
+  <div class="header">
+    <div class="flex-container">
+      <div class="title-name">Carlyn O'Leary</div>
+      <div><a class="title-link" href="./about.html">About me</a></div>
+      <div><a class="title-link" href="./experience.html">Experience</a></div>
+      <div><a class="title-link" href="./background.html">Background</a></div>
+      <div><a class="title-link" href="./projects.html">Projects</a></div>
+      <div><a class="title-link" href="./contact.html">Contact Me</a></div>
     </div>
-    </div>
-    </body>
-    <script src="app.js"></script>
+  </div>
+  <div class="experience-page">
+    <!-- Paylocity Section -->
+    <section class="exp-section">
+      <div class="exp-header">
+        <img class="exp-img" src="../images/paylocity-logo.png" alt="Paylocity Logo" />
+        <div class="exp-title-section">
+          <h1 class="exp-title">Paylocity</h1>
+          <h2 class="job-title">Software Engineer</h2>
+          <h3 class="exp-period">Full Time July 2022 - Present</h3>
+          <h3 class="exp-period">Software Engineering Intern June 2021 - Aug 2021</h3>
+        </div>
+      </div>
+      <div class="exp-content">
+        <p>Full stack engineering for an HCM (Human Capital Management platform).</p>
+        <p>Currently develop features from start to finish including query construction, API implementation, and UI
+          elements.</p>
+        <p><strong>Tech stack:</strong> React, .Net, JavaScript, C#, and SQL</p>
+        <a class="exp-link"
+          href="https://www.paylocity.com/lp/software/scalable-tailored-hr/?utm_source=google&utm_medium=paid&utm_campaign=us-b_search-brand_core-conv&utm_content=PAY-TM-BrandCore-Paylocity&utm_term=paylocity&gad_source=1&gclid=CjwKCAjwgpCzBhBhEiwAOSQWQUQhVIPeiJMAa6XswqNJ_YxySb9pn_sJoU-FdJj6YlI3cLlGVy9eFBoCWCYQAvD_BwE">Paylocity
+          Website</a>
+      </div>
+    </section>
+
+    <!-- Wine Dine and Talk Money Section -->
+    <section class="exp-section">
+      <div class="exp-header">
+        <img class="exp-img" src="../images/Gray-blue.svg" alt="Wine Dine and Talk Money Logo" />
+        <div class="exp-title-section">
+          <h1 class="exp-title">Wine Dine & Talk Money</h1>
+          <h2 class="job-title">Co-Founder</h2>
+          <h3 class="exp-period">October 2023 - Present</h3>
+        </div>
+      </div>
+      <div class="exp-content">
+        <p>Co-founded a startup focused on creating safe spaces for women to talk about money.</p>
+        <p>Manage day-to-day operations, marketing efforts, and community building.</p>
+        <p>Created and continue to maintain the website.</p>
+      </div>
+      <div class="exp-content">
+        <a class="exp-link" href="https://www.winedineandtalkmoney.com">Wine Dine and Talk Money Website</a>
+      </div>
+    </section>
+
+    <!-- Veo Robotics Section -->
+    <section class="exp-section">
+      <div class="exp-header">
+        <img class="exp-img-veo" src="../images/veo-robotics.png" alt="Veo Robotics Logo" />
+        <div class="exp-title-section">
+          <h1 class="exp-title">Veo Robotics</h1>
+          <h2 class="job-title">Software Engineering Intern</h2>
+          <h3 class="exp-period">May 2019 - Aug 2020 and May 2020 - Aug 2021</h3>
+        </div>
+      </div>
+      <div class="exp-content">
+        <p><strong>Internship 1:</strong> DevOps engineering included work on helping to improve the internal process of
+          development through visuals.</p>
+        <p><strong>Tech stack:</strong> Python and Java</p>
+        <p><strong>Internship 2:</strong> Helped to create graphics tracking engines that robots ran on.</p>
+        <p><strong>Tech stack:</strong> pandas via Python</p>
+        <a class="exp-link" href="https://www.veobot.com/">Veo Robotics Website</a>
+      </div>
+    </section>
+
+    <!-- NextShift/JASCI Section -->
+    <section class="exp-section">
+      <div class="exp-header">
+        <img class="exp-img-veo" src="../images/jasci.png" alt="JASCI Logo" />
+        <div class="exp-title-section">
+          <h1 class="exp-title">NextShift Robotics to JASCI</h1>
+          <h2 class="job-title">Software Engineering Intern</h2>
+          <h3 class="exp-period">July 2017</h3>
+        </div>
+      </div>
+      <div class="exp-content">
+        <p>Spent time demoing robots and learning startup development processes.</p>
+        <p>NextShift created robots that helped automate the process of warehouse work by helping workers move items
+          more easily.</p>
+        <p>NextShift was acquired by JASCI.</p>
+        <a class="exp-link" href="https://www.jascicloud.com/robotics-hub">JASCI Website</a>
+      </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section class="exp-section resume-section">
+      <div class="exp-header">
+        <div class="exp-title-section">
+          <h1 class="exp-title">Full Resume</h1>
+        </div>
+      </div>
+      <div class="exp-content">
+        <iframe loading="lazy" class="resume-pdf"
+          src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAFqyxxNzzo&#x2F;view?embed"
+          allowfullscreen="allowfullscreen" allow="fullscreen">
+        </iframe>
+        <a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAFqyxxNzzo&#x2F;view?utm_content=DAFqyxxNzzo&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link"
+          target="_blank" rel="noopener">View full resume</a>
+      </div>
+    </section>
+  </div>
+</body>
+<script src="app.js"></script>
+
 </html>

@@ -1,9 +1,24 @@
+body {
+  background-color: #F1EFED;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  width: 100vw;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
 .flex-container {
   display: flex;
   flex-wrap: nowrap;
   border-bottom: #949494;
-  box-shadow:inset;
+  box-shadow: inset;
   -webkit-box-shadow: 0 4px 6px -6px #222;
+  background-color: #804878;
+  width: 100%;
 }
 
 .title-link {
@@ -15,39 +30,41 @@
   flex: 2 1;
 }
 
-.flex-container > div > a {
-  color: #949494;
+.flex-container>div>a {
+  color: #F1EFED;
   border-bottom: hidden;
   border: hidden;
   outline: none;
   text-decoration: none;
-  font-family: Montserrat, sans-serif;
+  font-family: "Inter Serif", serif;
+  font-size: 18px;
+  text-transform: uppercase;
 }
 
-.flex-container > div > a:hover {
-  color: lightpink;
-  font-size: 33px;
+.flex-container>div>a:hover {
+  color: #F1EFED;
+  font-size: 20px;
   border-bottom: solid, #222;
-  font-family: Montserrat, sans-serif;
+  font-family: "Inter Serif", serif;
 }
 
 .title-name {
-  color: #949494;
+  color: #F1EFED;
   border-bottom: hidden;
   border: hidden;
   outline: none;
   text-decoration: none;
 }
 
-#body
-.flex-container-home {
+#body .flex-container-home {
   display: flex;
   flex-wrap: nowrap;
   border-bottom: #949494;
-  box-shadow:inset;
+  box-shadow: inset;
   -webkit-box-shadow: 0 4px 6px -6px #222;
 }
-.flex-container-home > div {
+
+.flex-container-home>div {
   width: max-content;
   margin: 10px;
   text-align: center;
@@ -56,7 +73,7 @@
 }
 
 .item {
-  box-shadow:inset;
+  box-shadow: inset;
   -webkit-box-shadow: 0 4px 6px -6px #222;
   padding: 1em;
   max-width: 75%;
@@ -64,6 +81,10 @@
   text-align: center;
   width: 600px;
   height: 400px;
+}
+
+.exp-item {
+  overflow-y: scroll;
 }
 
 .exp-container {
@@ -94,6 +115,7 @@
   margin-top: 0px;
   margin-bottom: 0px;
 }
+
 .exp-title-nextShift {
   text-decoration: none;
   color: gray;
@@ -116,6 +138,7 @@
   width: 6rem;
   border: 1px solid #d9e6ff;
 }
+
 .exp-img-veo {
   width: 10rem;
   border: 1px solid #d9e6ff;
@@ -124,7 +147,7 @@
 .exp-link {
   text-decoration: none;
   font-weight: 500;
-  color: orange;
+  color: #A3A9A0;
   font-size: 25px;
 }
 
@@ -136,11 +159,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow-y:scroll;
+  overflow-y: scroll;
 }
 
 .contact-inner-div {
-  display:grid;
+  display: grid;
   gap: 10px 10em;
   align-items: center;
   justify-content: center;
@@ -148,19 +171,21 @@
   grid-template-columns: 3fr;
 }
 
-.linkedin, .email-me-link, .github{
+.linkedin,
+.email-me-link,
+.github {
   font-size: 24px;
   color: lightpink;
   text-decoration: none;
 }
 
-.contact-box {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 0px 4em;
-  align-items: center;
+.contact-container {
+  display: flex;
   justify-content: center;
-  margin-top: 5%;
+  align-items: center;
+  gap: 3rem;
+  margin-top: 5rem;
+  padding: 2rem;
 }
 
 .icon-contact {
@@ -168,22 +193,35 @@
 }
 
 .contact-link {
-  padding: 30px;
+  padding: 20px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #4A4E69;
+}
+
+.contact-link:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .title-name {
   text-align: center;
   line-height: 75px;
-  color: lightpink;
+  color: #F1EFED;
   margin-right: 16rem;
   font-weight: lighter;
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-family: Montserrat, sans-serif;
-  font-size: 40px;
+  font-size: 32px;
   margin-left: 1rem;
 }
 
-.syr-img, .elon-img {
+.syr-img,
+.elon-img {
   width: 9rem;
 }
 
@@ -199,11 +237,16 @@
   color: gray;
 }
 
-.syr-h, .vol-h, .vol-p, .elon-h, .proj-desc {
+.syr-h,
+.vol-h,
+.vol-p,
+.elon-h,
+.proj-desc {
   margin: 0px;
 }
 
-.vol-h, .media-serv-h3 {
+.vol-h,
+.media-serv-h3 {
   color: orange;
 }
 
@@ -212,12 +255,12 @@
   margin: 0px;
 }
 
-.syr-list > li > p {
+.syr-list>li>p {
   font-size: 16px;
 }
 
-.syr-list > li > h4 {
- color: orange;
+.syr-list>li>h4 {
+  color: orange;
 }
 
 .back-item {
@@ -233,5 +276,483 @@
 }
 
 .proj-title {
-  color: orange
+  color: orange;
+}
+
+/* Experience page new layout styles */
+.experience-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.exp-section {
+  margin-bottom: 3rem;
+  border-bottom: 2px solid #804878;
+  padding-bottom: 2rem;
+}
+
+.exp-section:last-child {
+  border-bottom: none;
+}
+
+.exp-header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.exp-title-section {
+  flex: 1;
+}
+
+.exp-title {
+  color: #4A4E69;
+  font-size: 2.5rem;
+  font-family: 'Minion Variable Concept', serif;
+  font-weight: bold;
+  margin: 0 0 0.5rem 0;
+}
+
+.job-title {
+  color: #A3A9A0;
+  font-size: 1.5rem;
+  font-family: 'Minion Variable Concept', serif;
+  font-weight: 600;
+  margin: 0 0 0.25rem 0;
+}
+
+.exp-period {
+  color: #A3A9A0;
+  font-size: 1.2rem;
+  font-family: 'Minion Variable Concept', serif;
+  font-weight: 500;
+  margin: 0 0 0.25rem 0;
+}
+
+.exp-content {
+  margin-left: 8rem;
+  /* Offset to align with text in exp-header */
+}
+
+.exp-content p {
+  font-family: Quicksand, Arial, sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.exp-content a {
+  display: inline-block;
+  background-color: #804878;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: Quicksand, Arial, sans-serif;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(128, 72, 120, 0.3);
+  margin-top: 1rem;
+}
+
+.exp-content a:hover {
+  background-color: #5a3260;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(128, 72, 120, 0.4);
+  text-decoration: none;
+}
+
+.resume-section .exp-content {
+  text-align: center;
+}
+
+.resume-pdf {
+  width: 100%;
+  height: 600px;
+  border: none;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+/* About page styles */
+.about-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.about-hero {
+  margin-bottom: 4rem;
+}
+
+.hero-content {
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+}
+
+.bio-image-container {
+  flex-shrink: 0;
+}
+
+.bio-image {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  object-position: center -20px;
+  border-radius: 50%;
+}
+
+.bio-content {
+  flex: 1;
+}
+
+.bio-content h1 {
+  color: #4A4E69;
+  font-size: 3rem;
+  font-family: 'Minion Variable Concept', serif;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.bio-content p {
+  font-size: 1.3rem;
+  line-height: 1.8;
+  color: #22223B;
+  font-family: Quicksand, Arial, sans-serif;
+  margin-bottom: 2rem;
+}
+
+.bio-highlights,
+.current-focus {
+  margin: 2rem 0;
+}
+
+.bio-highlights h2,
+.current-focus h2 {
+  color: #A3A9A0;
+  font-size: 1.8rem;
+  font-family: 'Minion Variable Concept', serif;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.bio-highlights ul {
+  list-style-type: disc;
+  padding-left: 2rem;
+}
+
+.bio-highlights li {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #22223B;
+  font-family: Quicksand, Arial, sans-serif;
+  margin-bottom: 0.8rem;
+  list-style-color: #A3A9A0;
+}
+
+.values-section h2 {
+  color: #A3A9A0;
+  font-size: 2.5rem;
+  font-family: 'Minion Variable Concept', serif;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.value-card {
+  background-color: rgba(241, 239, 237, 0.5);
+  padding: 2rem;
+  border-radius: 12px;
+  border: 2px solid rgba(128, 72, 120, 0.2);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-5px);
+}
+
+.value-card h3 {
+  color: #A3A9A0;
+  font-size: 1.5rem;
+  font-family: 'Minion Variable Concept', serif;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.value-card p {
+  color: #22223B;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-family: Quicksand, Arial, sans-serif;
+}
+
+/* Background page styles */
+.background-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.bg-section {
+  margin-bottom: 3rem;
+  border-bottom: 2px solid #804878;
+  padding-bottom: 2rem;
+}
+
+.bg-section:last-child {
+  border-bottom: none;
+}
+
+.bg-header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.bg-title-section {
+  flex: 1;
+}
+
+.bg-title {
+  color: #4A4E69;
+  font-size: 2.5rem;
+  font-family: 'Minion Variable Concept', serif;
+  font-weight: bold;
+  margin: 0 0 0.5rem 0;
+}
+
+.bg-subtitle {
+  color: #A3A9A0;
+  font-size: 1.5rem;
+  font-family: 'Minion Variable Concept', serif;
+  font-weight: 600;
+  margin: 0 0 0.25rem 0;
+}
+
+.bg-period {
+  color: #A3A9A0;
+  font-size: 1.2rem;
+  font-family: 'Minion Variable Concept', serif;
+  font-weight: 500;
+  margin: 0 0 0.25rem 0;
+}
+
+.bg-img {
+  width: 6rem;
+  border: 1px solid #d9e6ff;
+}
+
+.bg-content {
+  margin-left: 8rem;
+  /* Offset to align with text in bg-header */
+}
+
+.bg-content p {
+  font-family: Quicksand, Arial, sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.campus-involv-title {
+  color: #A3A9A0;
+  font-size: 1.8rem;
+  font-family: 'Minion Variable Concept', serif;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.campus-involvement {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.involvement-item {
+  background-color: rgba(241, 239, 237, 0.5);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid rgba(128, 72, 120, 0.2);
+}
+
+.involvement-item h4 {
+  color: #A3A9A0;
+  font-size: 1.3rem;
+  font-family: 'Minion Variable Concept', serif;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.involvement-item p {
+  font-family: Quicksand, Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #333;
+  margin: 0;
+}
+
+.volunteer-item {
+  margin-bottom: 2rem;
+}
+
+.vol-h {
+  color: #A3A9A0;
+  font-size: 1.3rem;
+  font-family: 'Minion Variable Concept', serif;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.vol-period {
+  color: #804878;
+  font-size: 1rem;
+  font-family: Quicksand, Arial, sans-serif;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .bio-image {
+    width: 250px;
+    height: 250px;
+  }
+
+  .bio-content h {
+    font-size: 2.5rem;
+  }
+
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bg-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .bg-content {
+    margin-left: 0;
+  }
+
+  .bg-img {
+    width: 4rem;
+  }
+
+  .contact-container {
+    gap: 2rem;
+    margin-top: 3rem;
+    padding: 1rem;
+  }
+
+  .icon-contact {
+    font-size: 3em;
+  }
+
+  .contact-link {
+    padding: 15px;
+  }
+
+  .project-title {
+    font-size: 2rem;
+  }
+
+  .project-content {
+    font-size: 1rem;
+  }
+
+  .arduino-img {
+    width: 250px;
+  }
+}
+
+/* Projects page styles */
+.projects-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.project-section {
+  margin-bottom: 4rem;
+  border-bottom: 2px solid #804878;
+  padding-bottom: 2rem;
+}
+
+.project-section:last-child {
+  border-bottom: none;
+}
+
+.project-title {
+  color: #4A4E69;
+  font-size: 2.5rem;
+  font-family: 'Minion Variable Concept', serif;
+  font-weight: bold;
+  margin: 0 0 1.5rem 0;
+  text-align: center;
+}
+
+.project-content {
+  font-family: Quicksand, Arial, sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.project-content p {
+  margin-bottom: 1.5rem;
+}
+
+.website-link {
+  font-weight: 600;
+  text-align: center;
+  margin-top: 2rem !important;
+}
+
+.website-link a {
+  color: #804878;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.website-link a:hover {
+  color: #5a3260;
+  text-decoration: underline;
+}
+
+.project-image {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.arduino-img {
+  width: 300px;
+  border: 1px solid #d9e6ff;
+  border-radius: 8px;
+}
+
+.paylocity-img {
+  width: 150px;
+  height: auto;
 }
