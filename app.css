@@ -1,294 +1,341 @@
+:root {
+  --blush: #EDDBDA;
+  --terracotta: #D68B79;
+  --olive: #A8AF71;
+  --sage: #DDE7CE;
+  --pale-blue: #D1E0E6;
+  --steel-blue: #A0BDC7;
+  --dark-text: #3d3d3d;
+  --sidebar-width: 220px;
+}
+
+/* ========================
+   BASE
+======================== */
 body {
-  background-color: #F1EFED;
+  background-color: var(--blush);
   margin: 0;
   padding: 0;
+  display: flex;
+  min-height: 100vh;
 }
 
-.header {
-  width: 100vw;
-  position: sticky;
+/* ========================
+   SIDEBAR
+======================== */
+.sidebar {
+  width: var(--sidebar-width);
+  position: fixed;
   top: 0;
+  left: 0;
+  height: 100vh;
+  background-color: var(--olive);
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1.2rem;
+  box-sizing: border-box;
   z-index: 1000;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.12);
 }
 
-.flex-container {
-  display: flex;
-  flex-wrap: nowrap;
-  border-bottom: #949494;
-  box-shadow: inset;
-  -webkit-box-shadow: 0 4px 6px -6px #222;
-  background-color: #804878;
-  width: 100%;
-}
-
-.title-link {
-  width: max-content;
-  margin: 10px;
-  text-align: center;
-  line-height: 75px;
-  font-size: 30px;
-  flex: 2 1;
-}
-
-.flex-container>div>a {
-  color: #F1EFED;
-  border-bottom: hidden;
-  border: hidden;
-  outline: none;
-  text-decoration: none;
-  font-family: "Inter Serif", serif;
-  font-size: 18px;
-  text-transform: uppercase;
-}
-
-.flex-container>div>a:hover {
-  color: #F1EFED;
-  font-size: 20px;
-  border-bottom: solid, #222;
-  font-family: "Inter Serif", serif;
-}
-
-.title-name {
-  color: #F1EFED;
-  border-bottom: hidden;
-  border: hidden;
-  outline: none;
-  text-decoration: none;
-}
-
-#body .flex-container-home {
-  display: flex;
-  flex-wrap: nowrap;
-  border-bottom: #949494;
-  box-shadow: inset;
-  -webkit-box-shadow: 0 4px 6px -6px #222;
-}
-
-.flex-container-home>div {
-  width: max-content;
-  margin: 10px;
-  text-align: center;
-  line-height: 75px;
-  font-size: 30px;
-}
-
-.item {
-  box-shadow: inset;
-  -webkit-box-shadow: 0 4px 6px -6px #222;
-  padding: 1em;
-  max-width: 75%;
-  background-color: #f1f3f2;
-  text-align: center;
-  width: 600px;
-  height: 400px;
-}
-
-.exp-item {
-  overflow-y: scroll;
-}
-
-.exp-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.box {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 10px 10em;
-  align-items: center;
-  justify-content: center;
-  margin-top: 5%;
-}
-
-.box :first-child {
-  align-self: center;
-}
-
-.exp-title {
-  text-decoration: none;
-  color: gray;
-  font-size: 40px;
-  font-family: Quicksand, Arial, sans-serif;
-  font-weight: 500;
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
-
-.exp-title-nextShift {
-  text-decoration: none;
-  color: gray;
-  font-size: 36px;
-  font-family: Quicksand, Arial, sans-serif;
-  font-weight: 500;
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
-
-.exp-desc {
-  font-family: Quicksand, Arial, sans-serif;
-  font-weight: 500;
-  text-align: center;
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
-
-.exp-img {
-  width: 6rem;
-  border: 1px solid #d9e6ff;
-}
-
-.exp-img-veo {
-  width: 10rem;
-  border: 1px solid #d9e6ff;
-}
-
-.exp-link {
-  text-decoration: none;
-  font-weight: 500;
-  color: #A3A9A0;
-  font-size: 25px;
-}
-
-.job-title {
-  font-weight: bold;
-}
-
-.contact-inner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow-y: scroll;
-}
-
-.contact-inner-div {
-  display: grid;
-  gap: 10px 10em;
-  align-items: center;
-  justify-content: center;
-  margin-top: 5%;
-  grid-template-columns: 3fr;
-}
-
-.linkedin,
-.email-me-link,
-.github {
-  font-size: 24px;
-  color: lightpink;
-  text-decoration: none;
-}
-
-.contact-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 3rem;
-  margin-top: 5rem;
-  padding: 2rem;
-}
-
-.icon-contact {
-  font-size: 4em;
-}
-
-.contact-link {
-  padding: 20px;
-  border-radius: 50%;
-  transition: all 0.3s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  color: #4A4E69;
-}
-
-.contact-link:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-}
-
-.title-name {
-  text-align: center;
-  line-height: 75px;
-  color: #F1EFED;
-  margin-right: 16rem;
-  font-weight: lighter;
-  font-size: 2rem;
+.sidebar-name {
+  color: #fff;
   font-family: Montserrat, sans-serif;
-  font-size: 32px;
-  margin-left: 1rem;
+  font-size: 1.4rem;
+  font-weight: 300;
+  margin-bottom: 2.5rem;
+  line-height: 1.3;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+  padding-bottom: 1.5rem;
 }
 
-.syr-img,
-.elon-img {
-  width: 9rem;
+.sidebar-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
-.background-title {
-  margin: 0px;
-  color: gray;
-  font-size: 36px;
-  font-family: Quicksand, Arial, sans-serif;
-  font-weight: 500;
+.sidebar-link {
+  color: #fff;
+  text-decoration: none;
+  font-family: "Inter Serif", serif;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.65rem 0.8rem;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
 }
 
-.campus-involv-title {
-  color: gray;
+.sidebar-link:hover {
+  background-color: rgba(255, 255, 255, 0.22);
 }
 
-.syr-h,
-.vol-h,
-.vol-p,
-.elon-h,
-.proj-desc {
-  margin: 0px;
-}
-
-.vol-h,
-.media-serv-h3 {
-  color: orange;
-}
-
-.syr-campus-inv {
-  text-align: left;
-  margin: 0px;
-}
-
-.syr-list>li>p {
-  font-size: 16px;
-}
-
-.syr-list>li>h4 {
-  color: orange;
-}
-
-.back-item {
-  overflow-y: scroll;
-}
-
-.volunteering-title {
-  margin-bottom: 5px;
-}
-
-.vol-desc {
-  margin-bottom: 15px;
-}
-
-.proj-title {
-  color: orange;
-}
-
-/* Experience page new layout styles */
-.experience-page {
+/* ========================
+   PAGE CONTENT OFFSET
+======================== */
+.about-page,
+.experience-page,
+.background-page,
+.projects-page {
+  margin-left: var(--sidebar-width);
+  flex: 1;
   max-width: 1200px;
-  margin: 0 auto;
   padding: 2rem;
+  box-sizing: border-box;
 }
 
+.contact-wrapper {
+  margin-left: var(--sidebar-width);
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* ========================
+   HOME PAGE HIERARCHY
+======================== */
+.bio-role {
+  font-family: Quicksand, Arial, sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--terracotta);
+  margin: 0 0 0.5rem 0;
+}
+
+.bio-content h1 {
+  color: var(--olive);
+  font-size: 3.5rem;
+  font-family: 'Minion Variable Concept', serif;
+  font-weight: bold;
+  margin: 0 0 1.5rem 0;
+  line-height: 1.1;
+}
+
+.bio-inline-link {
+  color: var(--terracotta);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.bio-inline-link:hover {
+  text-decoration: underline;
+}
+
+.bio-cta {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.cta-btn {
+  display: inline-block;
+  padding: 0.75rem 1.75rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-family: Quicksand, Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.cta-primary {
+  background-color: var(--terracotta);
+  color: #fff;
+  box-shadow: 0 2px 6px rgba(214, 139, 121, 0.35);
+}
+
+.cta-primary:hover {
+  background-color: #c4705e;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(214, 139, 121, 0.4);
+}
+
+.cta-secondary {
+  background-color: transparent;
+  color: var(--olive);
+  border: 2px solid var(--olive);
+}
+
+.cta-secondary:hover {
+  background-color: var(--olive);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.section-divider {
+  height: 2px;
+  background: linear-gradient(to right, var(--terracotta), var(--pale-blue));
+  border-radius: 2px;
+  margin: 3rem 0;
+  opacity: 0.5;
+}
+
+/* ========================
+   PAGE HEADING
+======================== */
+.page-heading {
+  font-family: 'Minion Variable Concept', serif;
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: var(--olive);
+  margin: 0 0 2rem 0;
+}
+
+/* ========================
+   ACCORDION
+======================== */
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.acc-item {
+  border-radius: 10px;
+  border: 2px solid transparent;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.acc-item.open {
+  border-color: var(--terracotta);
+  box-shadow: 0 4px 16px rgba(214, 139, 121, 0.18);
+}
+
+.acc-trigger {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 1.25rem 1.5rem;
+  cursor: pointer;
+  text-align: left;
+}
+
+.acc-header {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.acc-logo {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+  flex-shrink: 0;
+  border-radius: 6px;
+  border: 1px solid var(--pale-blue);
+  padding: 4px;
+  background: #fff;
+}
+
+.acc-logo-wide {
+  width: 80px;
+  height: 40px;
+}
+
+.acc-title-block {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.acc-company {
+  font-family: 'Minion Variable Concept', serif;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: var(--olive);
+}
+
+.acc-meta {
+  font-family: Quicksand, Arial, sans-serif;
+  font-size: 0.95rem;
+  color: var(--steel-blue);
+}
+
+.acc-chevron {
+  font-size: 1.5rem;
+  color: var(--terracotta);
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.acc-item.open .acc-chevron {
+  transform: rotate(180deg);
+}
+
+.acc-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+}
+
+.acc-item.open .acc-body {
+  max-height: 600px;
+}
+
+.acc-content {
+  padding: 0 1.5rem 1.5rem 1.5rem;
+  border-top: 1px solid var(--sage);
+}
+
+.acc-content p {
+  font-family: Quicksand, Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--dark-text);
+  margin: 0.75rem 0 0 0;
+}
+
+.acc-also {
+  color: var(--steel-blue) !important;
+  font-size: 0.95rem !important;
+}
+
+.acc-link {
+  display: inline-block;
+  margin-top: 1rem;
+  font-family: Quicksand, Arial, sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--terracotta);
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+.acc-link:hover {
+  border-bottom-color: var(--terracotta);
+}
+
+/* Resume section */
+.resume-section {
+  margin-top: 2rem;
+}
+
+.resume-heading {
+  font-family: 'Minion Variable Concept', serif;
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--olive);
+  margin: 0 0 1.5rem 0;
+}
+
+/* ========================
+   EXPERIENCE PAGE (legacy)
+======================== */
 .exp-section {
   margin-bottom: 3rem;
-  border-bottom: 2px solid #804878;
+  border-bottom: 2px solid var(--terracotta);
   padding-bottom: 2rem;
 }
 
@@ -308,7 +355,7 @@ body {
 }
 
 .exp-title {
-  color: #4A4E69;
+  color: var(--olive);
   font-size: 2.5rem;
   font-family: 'Minion Variable Concept', serif;
   font-weight: bold;
@@ -316,7 +363,7 @@ body {
 }
 
 .job-title {
-  color: #A3A9A0;
+  color: var(--steel-blue);
   font-size: 1.5rem;
   font-family: 'Minion Variable Concept', serif;
   font-weight: 600;
@@ -324,7 +371,7 @@ body {
 }
 
 .exp-period {
-  color: #A3A9A0;
+  color: var(--steel-blue);
   font-size: 1.2rem;
   font-family: 'Minion Variable Concept', serif;
   font-weight: 500;
@@ -333,7 +380,6 @@ body {
 
 .exp-content {
   margin-left: 8rem;
-  /* Offset to align with text in exp-header */
 }
 
 .exp-content p {
@@ -341,12 +387,12 @@ body {
   font-size: 1.1rem;
   line-height: 1.6;
   margin-bottom: 1rem;
-  color: #333;
+  color: var(--dark-text);
 }
 
 .exp-content a {
   display: inline-block;
-  background-color: #804878;
+  background-color: var(--terracotta);
   color: white;
   padding: 10px 20px;
   border-radius: 6px;
@@ -355,15 +401,14 @@ body {
   font-weight: 500;
   font-family: Quicksand, Arial, sans-serif;
   transition: all 0.3s ease;
-  box-shadow: 0 2px 4px rgba(128, 72, 120, 0.3);
+  box-shadow: 0 2px 4px rgba(214, 139, 121, 0.3);
   margin-top: 1rem;
 }
 
 .exp-content a:hover {
-  background-color: #5a3260;
+  background-color: #c4705e;
   transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(128, 72, 120, 0.4);
-  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(214, 139, 121, 0.4);
 }
 
 .resume-section .exp-content {
@@ -378,13 +423,19 @@ body {
   margin-bottom: 1rem;
 }
 
-/* About page styles */
-.about-page {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem;
+.exp-img {
+  width: 6rem;
+  border: 1px solid var(--pale-blue);
 }
 
+.exp-img-veo {
+  width: 10rem;
+  border: 1px solid var(--pale-blue);
+}
+
+/* ========================
+   ABOUT PAGE
+======================== */
 .about-hero {
   margin-bottom: 4rem;
 }
@@ -411,18 +462,10 @@ body {
   flex: 1;
 }
 
-.bio-content h1 {
-  color: #4A4E69;
-  font-size: 3rem;
-  font-family: 'Minion Variable Concept', serif;
-  font-weight: bold;
-  margin-bottom: 1.5rem;
-}
-
 .bio-content p {
   font-size: 1.3rem;
   line-height: 1.8;
-  color: #22223B;
+  color: var(--dark-text);
   font-family: Quicksand, Arial, sans-serif;
   margin-bottom: 2rem;
 }
@@ -434,7 +477,7 @@ body {
 
 .bio-highlights h2,
 .current-focus h2 {
-  color: #A3A9A0;
+  color: var(--steel-blue);
   font-size: 1.8rem;
   font-family: 'Minion Variable Concept', serif;
   font-weight: 600;
@@ -449,14 +492,13 @@ body {
 .bio-highlights li {
   font-size: 1.1rem;
   line-height: 1.6;
-  color: #22223B;
+  color: var(--dark-text);
   font-family: Quicksand, Arial, sans-serif;
   margin-bottom: 0.8rem;
-  list-style-color: #A3A9A0;
 }
 
 .values-section h2 {
-  color: #A3A9A0;
+  color: var(--steel-blue);
   font-size: 2.5rem;
   font-family: 'Minion Variable Concept', serif;
   font-weight: bold;
@@ -471,10 +513,10 @@ body {
 }
 
 .value-card {
-  background-color: rgba(241, 239, 237, 0.5);
+  background-color: var(--sage);
   padding: 2rem;
   border-radius: 12px;
-  border: 2px solid rgba(128, 72, 120, 0.2);
+  border: 2px solid rgba(214, 139, 121, 0.25);
   text-align: center;
   transition: transform 0.3s ease;
 }
@@ -484,7 +526,7 @@ body {
 }
 
 .value-card h3 {
-  color: #A3A9A0;
+  color: var(--terracotta);
   font-size: 1.5rem;
   font-family: 'Minion Variable Concept', serif;
   font-weight: 600;
@@ -492,22 +534,243 @@ body {
 }
 
 .value-card p {
-  color: #22223B;
+  color: var(--dark-text);
   font-size: 1rem;
   line-height: 1.5;
   font-family: Quicksand, Arial, sans-serif;
 }
 
-/* Background page styles */
-.background-page {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem;
+/* ========================
+   TIMELINE (background page)
+======================== */
+.timeline {
+  position: relative;
+  padding-left: 1rem;
 }
 
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 12px;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--terracotta), var(--steel-blue));
+  border-radius: 2px;
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 2.75rem;
+  padding-bottom: 2.5rem;
+}
+
+.timeline-item:last-child {
+  padding-bottom: 0;
+}
+
+.timeline-marker {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.85rem;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: 0;
+  top: 4px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: var(--terracotta);
+  border: 3px solid var(--blush);
+  box-shadow: 0 0 0 2px var(--terracotta);
+  flex-shrink: 0;
+}
+
+.timeline-dot--alt {
+  background-color: var(--steel-blue);
+  box-shadow: 0 0 0 2px var(--steel-blue);
+}
+
+.timeline-date {
+  font-family: Quicksand, Arial, sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--terracotta);
+}
+
+.timeline-item:last-child .timeline-date {
+  color: var(--steel-blue);
+}
+
+.timeline-card {
+  background-color: #fff;
+  border-radius: 12px;
+  border: 2px solid var(--sage);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.timeline-card:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  border-color: var(--terracotta);
+}
+
+.timeline-card-header {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid var(--sage);
+}
+
+.tl-logo {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+  flex-shrink: 0;
+  border-radius: 6px;
+  border: 1px solid var(--pale-blue);
+  padding: 4px;
+  background: #fff;
+}
+
+.tl-title {
+  font-family: 'Minion Variable Concept', serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--olive);
+  margin: 0 0 0.2rem 0;
+}
+
+.tl-subtitle {
+  font-family: Quicksand, Arial, sans-serif;
+  font-size: 0.95rem;
+  color: var(--steel-blue);
+  margin: 0;
+  font-weight: 600;
+}
+
+.timeline-card-body {
+  padding: 1.25rem 1.5rem;
+}
+
+.timeline-card-body > p {
+  font-family: Quicksand, Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--dark-text);
+  margin: 0;
+}
+
+.tl-section-label {
+  font-family: Quicksand, Arial, sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--steel-blue);
+  margin: 0 0 0.85rem 0;
+}
+
+.tl-involvement-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.85rem;
+}
+
+.tl-involvement-item {
+  background-color: var(--sage);
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.tl-involvement-item h4 {
+  font-family: 'Minion Variable Concept', serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--terracotta);
+  margin: 0 0 0.4rem 0;
+}
+
+.tl-involvement-item p {
+  font-family: Quicksand, Arial, sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--dark-text);
+  margin: 0;
+}
+
+.tl-vol-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.tl-vol-item {
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--sage);
+}
+
+.tl-vol-item:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.tl-vol-header {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  margin-bottom: 0.4rem;
+}
+
+.tl-vol-header h4 {
+  font-family: 'Minion Variable Concept', serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--olive);
+  margin: 0;
+}
+
+.tl-vol-period {
+  font-family: Quicksand, Arial, sans-serif;
+  font-size: 0.85rem;
+  color: var(--steel-blue);
+  font-weight: 600;
+}
+
+.tl-vol-item p {
+  font-family: Quicksand, Arial, sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--dark-text);
+  margin: 0;
+}
+
+/* Mobile timeline */
+@media (max-width: 768px) {
+  .tl-involvement-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tl-vol-header {
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+}
+
+/* ========================
+   BACKGROUND PAGE (legacy)
+======================== */
 .bg-section {
   margin-bottom: 3rem;
-  border-bottom: 2px solid #804878;
+  border-bottom: 2px solid var(--terracotta);
   padding-bottom: 2rem;
 }
 
@@ -527,7 +790,7 @@ body {
 }
 
 .bg-title {
-  color: #4A4E69;
+  color: var(--olive);
   font-size: 2.5rem;
   font-family: 'Minion Variable Concept', serif;
   font-weight: bold;
@@ -535,7 +798,7 @@ body {
 }
 
 .bg-subtitle {
-  color: #A3A9A0;
+  color: var(--steel-blue);
   font-size: 1.5rem;
   font-family: 'Minion Variable Concept', serif;
   font-weight: 600;
@@ -543,7 +806,7 @@ body {
 }
 
 .bg-period {
-  color: #A3A9A0;
+  color: var(--steel-blue);
   font-size: 1.2rem;
   font-family: 'Minion Variable Concept', serif;
   font-weight: 500;
@@ -552,12 +815,11 @@ body {
 
 .bg-img {
   width: 6rem;
-  border: 1px solid #d9e6ff;
+  border: 1px solid var(--pale-blue);
 }
 
 .bg-content {
   margin-left: 8rem;
-  /* Offset to align with text in bg-header */
 }
 
 .bg-content p {
@@ -565,11 +827,11 @@ body {
   font-size: 1.1rem;
   line-height: 1.6;
   margin-bottom: 1rem;
-  color: #333;
+  color: var(--dark-text);
 }
 
 .campus-involv-title {
-  color: #A3A9A0;
+  color: var(--steel-blue);
   font-size: 1.8rem;
   font-family: 'Minion Variable Concept', serif;
   font-weight: 600;
@@ -583,14 +845,14 @@ body {
 }
 
 .involvement-item {
-  background-color: rgba(241, 239, 237, 0.5);
+  background-color: var(--sage);
   padding: 1.5rem;
   border-radius: 8px;
-  border: 1px solid rgba(128, 72, 120, 0.2);
+  border: 1px solid rgba(214, 139, 121, 0.2);
 }
 
 .involvement-item h4 {
-  color: #A3A9A0;
+  color: var(--terracotta);
   font-size: 1.3rem;
   font-family: 'Minion Variable Concept', serif;
   font-weight: 600;
@@ -601,7 +863,7 @@ body {
   font-family: Quicksand, Arial, sans-serif;
   font-size: 1rem;
   line-height: 1.5;
-  color: #333;
+  color: var(--dark-text);
   margin: 0;
 }
 
@@ -610,7 +872,7 @@ body {
 }
 
 .vol-h {
-  color: #A3A9A0;
+  color: var(--terracotta);
   font-size: 1.3rem;
   font-family: 'Minion Variable Concept', serif;
   font-weight: 600;
@@ -618,15 +880,173 @@ body {
 }
 
 .vol-period {
-  color: #804878;
+  color: var(--terracotta);
   font-size: 1rem;
   font-family: Quicksand, Arial, sans-serif;
   font-weight: 500;
   margin-bottom: 0.5rem;
 }
 
-/* Responsive design */
+/* ========================
+   PROJECTS PAGE
+======================== */
+.project-section {
+  margin-bottom: 4rem;
+  border-bottom: 2px solid var(--terracotta);
+  padding-bottom: 2rem;
+}
+
+.project-section:last-child {
+  border-bottom: none;
+}
+
+.project-title {
+  color: var(--olive);
+  font-size: 2.5rem;
+  font-family: 'Minion Variable Concept', serif;
+  font-weight: bold;
+  margin: 0 0 1.5rem 0;
+  text-align: center;
+}
+
+.project-content {
+  font-family: Quicksand, Arial, sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--dark-text);
+}
+
+.project-content p {
+  margin-bottom: 1.5rem;
+}
+
+.website-link {
+  font-weight: 600;
+  text-align: center;
+  margin-top: 2rem !important;
+}
+
+.website-link a {
+  color: var(--terracotta);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.website-link a:hover {
+  color: #c4705e;
+  text-decoration: underline;
+}
+
+.project-image {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.arduino-img {
+  width: 300px;
+  border: 1px solid var(--pale-blue);
+  border-radius: 8px;
+}
+
+.paylocity-img {
+  width: 150px;
+  height: auto;
+}
+
+/* ========================
+   CONTACT PAGE
+======================== */
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  padding: 2rem;
+}
+
+.icon-contact {
+  font-size: 4em;
+}
+
+.contact-link {
+  padding: 20px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: var(--terracotta);
+}
+
+.contact-link:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* ========================
+   MISC / LEGACY
+======================== */
+.exp-link {
+  text-decoration: none;
+  font-weight: 500;
+  color: var(--steel-blue);
+  font-size: 25px;
+}
+
+.syr-img,
+.elon-img {
+  width: 9rem;
+}
+
+/* ========================
+   MOBILE
+======================== */
 @media (max-width: 768px) {
+  body {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 1rem;
+    gap: 0.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  }
+
+  .sidebar-name {
+    font-size: 1.1rem;
+    margin-bottom: 0;
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-right: auto;
+  }
+
+  .sidebar-links {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+  }
+
+  .sidebar-link {
+    font-size: 0.75rem;
+    padding: 0.4rem 0.6rem;
+  }
+
+  .about-page,
+  .experience-page,
+  .background-page,
+  .projects-page,
+  .contact-wrapper {
+    margin-left: 0;
+  }
+
   .hero-content {
     flex-direction: column;
     text-align: center;
@@ -635,10 +1055,6 @@ body {
   .bio-image {
     width: 250px;
     height: 250px;
-  }
-
-  .bio-content h {
-    font-size: 2.5rem;
   }
 
   .values-grid {
@@ -651,7 +1067,8 @@ body {
     gap: 1rem;
   }
 
-  .bg-content {
+  .bg-content,
+  .exp-content {
     margin-left: 0;
   }
 
@@ -661,7 +1078,6 @@ body {
 
   .contact-container {
     gap: 2rem;
-    margin-top: 3rem;
     padding: 1rem;
   }
 
@@ -684,75 +1100,4 @@ body {
   .arduino-img {
     width: 250px;
   }
-}
-
-/* Projects page styles */
-.projects-page {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem;
-}
-
-.project-section {
-  margin-bottom: 4rem;
-  border-bottom: 2px solid #804878;
-  padding-bottom: 2rem;
-}
-
-.project-section:last-child {
-  border-bottom: none;
-}
-
-.project-title {
-  color: #4A4E69;
-  font-size: 2.5rem;
-  font-family: 'Minion Variable Concept', serif;
-  font-weight: bold;
-  margin: 0 0 1.5rem 0;
-  text-align: center;
-}
-
-.project-content {
-  font-family: Quicksand, Arial, sans-serif;
-  font-size: 1.1rem;
-  line-height: 1.6;
-  color: #333;
-}
-
-.project-content p {
-  margin-bottom: 1.5rem;
-}
-
-.website-link {
-  font-weight: 600;
-  text-align: center;
-  margin-top: 2rem !important;
-}
-
-.website-link a {
-  color: #804878;
-  text-decoration: none;
-  font-weight: 600;
-  transition: color 0.3s ease;
-}
-
-.website-link a:hover {
-  color: #5a3260;
-  text-decoration: underline;
-}
-
-.project-image {
-  text-align: center;
-  margin-top: 2rem;
-}
-
-.arduino-img {
-  width: 300px;
-  border: 1px solid #d9e6ff;
-  border-radius: 8px;
-}
-
-.paylocity-img {
-  width: 150px;
-  height: auto;
 }

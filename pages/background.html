@@ -7,97 +7,124 @@
 </head>
 
 <body>
-  <div class="header">
-    <div class="flex-container">
-      <div class="title-name">Carlyn O'Leary</div>
-      <div><a class="title-link" href="./about.html">About me</a></div>
-      <div><a class="title-link" href="./experience.html">Experience</a></div>
-      <div><a class="title-link" href="./background.html">Background</a></div>
-      <div><a class="title-link" href="./projects.html">Projects</a></div>
-      <div><a class="title-link" href="./contact.html">Contact Me</a></div>
+  <nav class="sidebar">
+    <div class="sidebar-name">Carlyn O'Leary</div>
+    <div class="sidebar-links">
+      <a class="sidebar-link" href="./about.html">About me</a>
+      <a class="sidebar-link" href="./experience.html">Experience</a>
+      <a class="sidebar-link" href="./background.html">Background</a>
+      <a class="sidebar-link" href="./projects.html">Projects</a>
+      <a class="sidebar-link" href="./contact.html">Contact Me</a>
     </div>
-  </div>
+  </nav>
 
   <div class="background-page">
-    <!-- Syracuse University Section -->
-    <section class="bg-section">
-      <div class="bg-header">
-        <img class="bg-img" src="../images/syracuse.png" alt="Syracuse University Logo" />
-        <div class="bg-title-section">
-          <h1 class="bg-title">Syracuse University</h1>
-          <h2 class="bg-subtitle">Computer Science B.S.</h2>
-          <h3 class="bg-period">2019 - 2022</h3>
-        </div>
-      </div>
-      <div class="bg-content">
-        <h3 class="campus-involv-title">Campus Involvement</h3>
-        <div class="campus-involvement">
-          <div class="involvement-item">
-            <h4>Alpha Omega Epsilon: Women in Engineering Sorority</h4>
-            <p>AOE was a sorority for women in Engineering that promoted female involvement and achievement in technical
-              and scientific fields.</p>
-          </div>
-          <div class="involvement-item">
-            <h4>Syracuse University Literacy Corps</h4>
-            <p>SULC was a program in which students went to Syracuse elementary schools weekly and helped kids improve
-              in reading, math, and other subjects.</p>
-          </div>
-          <div class="involvement-item">
-            <h4>Fox Force Seven: Ultimate Frisbee Club Team</h4>
-            <p>Fox Force Seven was an all women frisbee team that travelled around New England playing games against
-              other college teams.</p>
-          </div>
-        </div>
-      </div>
-    </section>
+    <h1 class="page-heading">Background</h1>
 
-    <!-- Elon University Section -->
-    <section class="bg-section">
-      <div class="bg-header">
-        <img class="bg-img" src="../images/elon.png" alt="Elon University Logo" />
-        <div class="bg-title-section">
-          <h1 class="bg-title">Elon University</h1>
-          <h2 class="bg-subtitle">Media Services Technician</h2>
-          <h3 class="bg-period">2018 - 2019</h3>
-        </div>
-      </div>
-      <div class="bg-content">
-        <p>I spent one year at Elon before transferring to Syracuse University.</p>
-        <p>At Elon I worked at the university's Media Services, where I got experience with hands-on technology use. I
-          helped set up AV systems, troubleshoot issues during presentations, and gave recommendations for what kind of
-          tools might be of use for different projects.</p>
-      </div>
-    </section>
+    <div class="timeline">
 
-    <!-- Volunteering Section -->
-    <section class="bg-section">
-      <div class="bg-header">
-        <div class="bg-title-section">
-          <h1 class="bg-title">Volunteering</h1>
+      <!-- Syracuse University -->
+      <div class="timeline-item">
+        <div class="timeline-marker">
+          <div class="timeline-dot"></div>
+          <span class="timeline-date">2019 – 2022</span>
+        </div>
+        <div class="timeline-card">
+          <div class="timeline-card-header">
+            <img class="tl-logo" src="../images/syracuse.png" alt="Syracuse University Logo" />
+            <div>
+              <h2 class="tl-title">Syracuse University</h2>
+              <p class="tl-subtitle">Computer Science B.S.</p>
+            </div>
+          </div>
+          <div class="timeline-card-body">
+            <p class="tl-section-label">Campus Involvement</p>
+            <div class="tl-involvement-grid">
+              <div class="tl-involvement-item">
+                <h4>Alpha Omega Epsilon</h4>
+                <p>Women in Engineering sorority promoting female involvement and achievement in technical and scientific fields.</p>
+              </div>
+              <div class="tl-involvement-item">
+                <h4>Syracuse University Literacy Corps</h4>
+                <p>Weekly tutoring at Syracuse elementary schools helping kids improve in reading, math, and other subjects.</p>
+              </div>
+              <div class="tl-involvement-item">
+                <h4>Fox Force Seven</h4>
+                <p>All-women Ultimate Frisbee club team that travelled around New England competing against other colleges.</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="bg-content">
-        <div class="volunteer-item">
-          <h3 class="vol-h">Horizons for Homeless Children</h3>
-          <p class="vol-period">Volunteer 2024 - Present; Boston, MA</p>
-          <p>Horizons for Homeless Children is an organization that promotes child play therapy for homeless children in
-            Boston.</p>
+
+      <!-- Elon University -->
+      <div class="timeline-item">
+        <div class="timeline-marker">
+          <div class="timeline-dot"></div>
+          <span class="timeline-date">2018 – 2019</span>
         </div>
-        <div class="volunteer-item">
-          <h3 class="vol-h">Not Bread Alone; Soup Kitchen</h3>
-          <p class="vol-period">Volunteer 2015 - 2018; Amherst, MA</p>
-          <p>Not Bread Alone is a soup kitchen in Amherst MA that caters to homeless individuals and families.</p>
-        </div>
-        <div class="volunteer-item">
-          <h3 class="vol-h">Amherst Survival Center</h3>
-          <p class="vol-period">Volunteer 2015 - 2018; Amherst, MA</p>
-          <p>Amherst Survival Center is a space for individuals and families in need to get groceries, meals, clothes,
-            and other basic necessities that they may need.</p>
+        <div class="timeline-card">
+          <div class="timeline-card-header">
+            <img class="tl-logo" src="../images/elon.png" alt="Elon University Logo" />
+            <div>
+              <h2 class="tl-title">Elon University</h2>
+              <p class="tl-subtitle">Media Services Technician</p>
+            </div>
+          </div>
+          <div class="timeline-card-body">
+            <p>Spent one year at Elon before transferring to Syracuse University. Worked in the university's Media Services department — set up AV systems, troubleshot issues during presentations, and recommended tools for different projects.</p>
+          </div>
         </div>
       </div>
-    </section>
+
+      <!-- Volunteering -->
+      <div class="timeline-item">
+        <div class="timeline-marker">
+          <div class="timeline-dot timeline-dot--alt"></div>
+          <span class="timeline-date">Volunteering</span>
+        </div>
+        <div class="timeline-card">
+          <div class="timeline-card-header">
+            <div>
+              <h2 class="tl-title">Community Involvement</h2>
+              <p class="tl-subtitle">2015 – Present</p>
+            </div>
+          </div>
+          <div class="timeline-card-body">
+            <div class="tl-vol-list">
+
+              <div class="tl-vol-item">
+                <div class="tl-vol-header">
+                  <h4>Horizons for Homeless Children</h4>
+                  <span class="tl-vol-period">2024 – Present &nbsp;·&nbsp; Boston, MA</span>
+                </div>
+                <p>Promotes child play therapy for homeless children in Boston.</p>
+              </div>
+
+              <div class="tl-vol-item">
+                <div class="tl-vol-header">
+                  <h4>Not Bread Alone — Soup Kitchen</h4>
+                  <span class="tl-vol-period">2015 – 2018 &nbsp;·&nbsp; Amherst, MA</span>
+                </div>
+                <p>Soup kitchen in Amherst catering to homeless individuals and families.</p>
+              </div>
+
+              <div class="tl-vol-item">
+                <div class="tl-vol-header">
+                  <h4>Amherst Survival Center</h4>
+                  <span class="tl-vol-period">2015 – 2018 &nbsp;·&nbsp; Amherst, MA</span>
+                </div>
+                <p>Space providing groceries, meals, clothing, and other necessities to individuals and families in need.</p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /timeline -->
   </div>
 </body>
-<script src="app.js"></script>
+<script src="../app.js"></script>
 
 </html>
